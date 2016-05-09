@@ -1,12 +1,7 @@
 module Linepipe
   class Railtie < Rails::Railtie
-    config.linepipe_manifest_file = 'config/linepipe-manifest.json'
-
-    if File.exists?(config.linepipe_manifest_file)
-      config.linepipe_manifest = JSON.parse(File.read(config.linepipe_manifest_file))
-    else
-      Rails.logger.warn "Can not find manifest file with path #{ config.linepipe_manifest_file }"
-      config.linepipe_manifest = {}
+    config.to_prepare do
+      Linepipe.setup!
     end
 
     initializer 'load linepipe integration' do
@@ -14,6 +9,17 @@ module Linepipe
         require 'linepipe/asset_url_helper'
         include AssetUrlHelper
       end
+    end
+  end
+
+  def self.setup!
+    config = Rails.configuration
+    config.linepipe_manifest_fil = 'config/linepipe-manifest.json'
+
+    if File.exists?(config.linepipe_manifest_file)
+      config.linepipe_manifest = JSON.parse(File.read(config.linepipe_manifest_file))
+    else
+      config.linepipe_manifest = {}
     end
   end
 end
