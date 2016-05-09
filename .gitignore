@@ -4,3 +4,5 @@ tmp
 .tags
 .idea
 Gemfile.lock
+.ruby-version
+.ruby-gemset
