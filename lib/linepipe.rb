@@ -1,6 +1,7 @@
 module Linepipe
   class Railtie < Rails::Railtie
     config.linepipe = ::ActiveSupport::OrderedOptions.new
+
     config.linepipe.manifest_file = 'config/linepipe-manifest.json'
 
     if config.respond_to?(:assets)
