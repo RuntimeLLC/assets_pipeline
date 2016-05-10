@@ -21,7 +21,8 @@ module AssetsPipeline
     initializer 'load assets_pipeline integration' do
       ActiveSupport.on_load :action_view do
         require 'assets_pipeline/asset_url_helper'
-        include AssetUrlHelper
+        ::ActionView::Helpers::AssetUrlHelper.prepend ::AssetsPipeline::AssetUrlHelper
+        include ::AssetsPipeline::AssetUrlHelper
       end
     end
   end
