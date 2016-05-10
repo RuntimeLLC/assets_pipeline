@@ -1,5 +1,6 @@
 # linepipe
 [![Gem Version](https://badge.fury.io/rb/linepipe.svg)](https://rubygems.org/gems/linepipe)
+[![Build Status](https://travis-ci.org/llxff/linepipe.svg?branch=master)](https://travis-ci.org/llxff/linepipe)
 
 Asset Pipeline for Rails with your favourite js bundler.
 
