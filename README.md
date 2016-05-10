@@ -1,6 +1,6 @@
-# assets-pipeline
-[![Gem Version](https://badge.fury.io/rb/assets-pipeline.svg)](https://rubygems.org/gems/assets-pipeline)
-[![Build Status](https://travis-ci.org/llxff/assets-pipeline.svg?branch=master)](https://travis-ci.org/llxff/assets-pipeline)
+# assets_pipeline
+[![Gem Version](https://badge.fury.io/rb/assets_pipeline.svg)](https://rubygems.org/gems/assets_pipeline)
+[![Build Status](https://travis-ci.org/llxff/assets_pipeline.svg?branch=master)](https://travis-ci.org/llxff/assets_pipeline)
 
 Asset Pipeline for Rails with your favourite js bundler.
 
