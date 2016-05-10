@@ -2,7 +2,7 @@ describe ActionView::Helpers::AssetUrlHelper do
   before :all do
     app = Class.new(Rails::Application)
     app.config.eager_load = false
-    app.config.linepipe.manifest_file = File.join('spec', 'fixtures', 'manifest.json')
+    app.config.assets_pipeline.manifest_file = File.join('spec', 'fixtures', 'manifest.json')
     app.initialize!
   end
 

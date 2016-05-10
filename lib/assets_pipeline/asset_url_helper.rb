@@ -1,4 +1,4 @@
-module Linepipe
+module AssetsPipeline
   module AssetUrlHelper
     extend ActiveSupport::Concern
 
@@ -12,8 +12,8 @@ module Linepipe
       def asset_path_from_manifest(asset_path)
         config = Rails.application.config
 
-        rev_path = config.linepipe.manifest[asset_path] || asset_path
-        [config.linepipe.prefix, rev_path].join('/')
+        rev_path = config.assets_pipeline.manifest[asset_path] || asset_path
+        [config.assets_pipeline.prefix, rev_path].join('/')
       end
 
       def clean_path(path)

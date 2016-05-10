@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
-  s.name        = 'linepipe'
+  s.name        = 'assets-pipeline'
   s.version     = '0.0.1'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Aleksandr Fomin', 'Marat Abdullin', 'Nikolay Sverchkov']
   s.email       = ['ll.wg.bin@gmail.com', 'esend.work@gmail.com', 'ssnikolay@gmail.com']
-  s.homepage    = 'https://github.com/RuntimeLLC/linepipe'
+  s.homepage    = 'https://github.com/RuntimeLLC/assets-pipeline'
   s.summary     = 'Asset Pipeline for Rails with your favourite js bundler'
   s.description = s.summary
 

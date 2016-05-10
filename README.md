@@ -1,6 +1,6 @@
-# linepipe
-[![Gem Version](https://badge.fury.io/rb/linepipe.svg)](https://rubygems.org/gems/linepipe)
-[![Build Status](https://travis-ci.org/llxff/linepipe.svg?branch=master)](https://travis-ci.org/llxff/linepipe)
+# assets-pipeline
+[![Gem Version](https://badge.fury.io/rb/assets-pipeline.svg)](https://rubygems.org/gems/assets-pipeline)
+[![Build Status](https://travis-ci.org/llxff/assets-pipeline.svg?branch=master)](https://travis-ci.org/llxff/assets-pipeline)
 
 Asset Pipeline for Rails with your favourite js bundler.
 
@@ -12,8 +12,8 @@ Install
 rails new project --skip-sprockets
 
 # config/application.rb
-config.linepipe.manifest_file = 'config/manifest.json' # default: config/linepipe-manifest.json
-config.linepipe.prefix        = '/assets'              # default: /assets
+config.assets_pipeline.manifest_file = 'config/manifest.json' # default: config/manifest.json
+config.assets_pipeline.prefix        = '/assets'              # default: /assets
 ``` 
 
 Configuration for js bundler
@@ -22,7 +22,7 @@ Configuration for js bundler
 Your js bundler should generate manifest file in JSON format:
 
 ```
-# config/linepipe-manifest.json
+# config/manifest.json
 
 {
   "application.js": "application-ea0d453146be2145f180.js",
