@@ -1,5 +1,5 @@
 describe ActionView::Helpers::AssetUrlHelper do
-  before do
+  before :all do
     app = Class.new(Rails::Application)
     app.config.eager_load = false
     app.config.linepipe.manifest_file = File.join('spec', 'fixtures', 'manifest.json')
@@ -46,7 +46,7 @@ describe ActionView::Helpers::AssetUrlHelper do
 
   describe 'stylesheet_link_tag' do
     it 'should return link tag with valid css file' do
-      expect(helper.stylesheet_link_tag('index', media: 'all')).to eq '<link rel="stylesheet" media="all" href="/assets/index-ea0d453146be2145f180.css" />'
+      expect(helper.stylesheet_link_tag('index', media: 'all')).to match 'assets/index-ea0d453146be2145f180.css'
     end
   end
 end
