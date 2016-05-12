@@ -4,6 +4,8 @@
 
 Asset Pipeline for Rails with your favourite js bundler.
 
+**JRuby is not currently supported.**
+
 Install
 =======
 
