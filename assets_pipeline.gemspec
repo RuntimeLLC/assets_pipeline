@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'assets_pipeline'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Aleksandr Fomin', 'Marat Abdullin', 'Nikolay Sverchkov']
   s.email       = ['ll.wg.bin@gmail.com', 'esend.work@gmail.com', 'ssnikolay@gmail.com']
