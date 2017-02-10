@@ -16,6 +16,8 @@ rails new project --skip-sprockets
 # config/application.rb
 config.assets_pipeline.manifest_file = 'config/manifest.json' # default: config/manifest.json
 config.assets_pipeline.prefix        = '/assets'              # default: /assets
+
+config.assets_pipeline.after_manifest_initialization = -> { puts 'called after mainifest initialization' }
 ``` 
 
 Configuration for js bundler
