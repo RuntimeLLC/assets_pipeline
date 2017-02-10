@@ -3,6 +3,7 @@ module AssetsPipeline
     config.assets_pipeline = ::ActiveSupport::OrderedOptions.new
 
     config.assets_pipeline.manifest_file = 'config/manifest.json'
+    config.assets_pipeline.after_manifest_initialization = nil
 
     if config.respond_to?(:assets)
       config.assets_pipeline.prefix = config.assets.prefix
@@ -15,6 +16,10 @@ module AssetsPipeline
         config.assets_pipeline.manifest = JSON.parse(File.read(config.assets_pipeline.manifest_file))
       else
         config.assets_pipeline.manifest = {}
+      end
+
+      if callback = config.assets_pipeline.after_manifest_initialization
+        callback.call
       end
     end
 
